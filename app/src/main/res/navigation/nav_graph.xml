@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPage">
+
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.translator.translatorwithrecorder.MainPage"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPage_to_recordFragment"
+            app:destination="@id/recordFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            />
+        <action
+            android:id="@+id/action_mainPage_to_translating"
+            app:destination="@id/translating"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="com.translator.translatorwithrecorder.RecordFragment"
+        android:label="fragment_record"
+        tools:layout="@layout/fragment_record" >
+        <action
+            android:id="@+id/action_recordFragment_to_audioListFragment"
+            app:destination="@id/audioListFragment"
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/audioListFragment"
+        android:name="com.translator.translatorwithrecorder.AudioListFragment"
+        android:label="fragment_audio_list"
+        tools:layout="@layout/fragment_audio_list" />
+    <fragment
+        android:id="@+id/translating"
+        android:name="com.translator.translatorwithrecorder.Translating"
+        android:label="fragment_translating"
+        tools:layout="@layout/fragment_translating" >
+        <action
+            android:id="@+id/action_translating_to_audioListFragment"
+            app:destination="@id/audioListFragment"
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+
+            />
+    </fragment>
+
+</navigation>

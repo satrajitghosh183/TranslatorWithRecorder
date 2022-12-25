@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RecordFragment"
+    android:background="@color/teal_2">
+
+    <ImageView
+        android:id="@+id/record_header_image"
+        android:layout_width="347dp"
+        android:layout_height="324dp"
+        android:contentDescription="@string/header_image"
+        android:src="@drawable/recorder_background_removed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/record_file_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Press the Mic Button \n to start recording"
+        android:lineHeight="32dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/record_header_image"
+        />
+    <Chronometer
+        android:id="@+id/record_timer"
+        app:layout_constraintTop_toBottomOf="@id/record_file_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-light"
+        android:textSize="40sp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+    <ImageView
+        android:id="@+id/record_btn"
+        android:layout_width="82dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/mic_bg_removed"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record_timer" />
+
+    <ImageView
+        android:id="@+id/record_list_button"
+        android:layout_width="92dp"
+        android:layout_height="117dp"
+        android:padding="16dp"
+        android:src="@drawable/menu_bg_removed"
+        app:layout_constraintBottom_toBottomOf="@id/record_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toEndOf="@id/record_btn"
+        app:layout_constraintTop_toTopOf="@id/record_btn"
+        app:layout_constraintVertical_bias="0.55" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
